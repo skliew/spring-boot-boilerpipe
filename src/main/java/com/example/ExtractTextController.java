@@ -11,7 +11,7 @@ import java.net.URL;
 
 @RestController
 public class ExtractTextController {
-    @RequestMapping(value="/extract-text", produces="application/json")
+    @RequestMapping(value="/extract-text", produces="text/plain")
     public String extractText(@RequestParam(value="url", defaultValue = "") String urlString) {
         if (urlString.isEmpty()) {
             return "";
